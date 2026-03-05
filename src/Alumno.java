@@ -1,3 +1,10 @@
+/*
+* Autor: Angel Leonardo Saenz Sanchez
+* version: 1.0.0
+*
+*
+* */
+
 public class Alumno {
 
     //Declaracion de variables sin inicializar
@@ -7,13 +14,14 @@ public class Alumno {
     private int edad;
 
 
-    //Contructo para la clase Alumno con sus atributos
+    //Contructor para la clase Alumno con sus atributos
     public Alumno alumno(int id, String nombre, String tituloFP, int edad){
 
         this.id = id;
         this.nombre = nombre;
         this.tituloFP = tituloFP;
         this.edad = edad;
+
     }
 
     //seccion getters
@@ -34,6 +42,13 @@ public class Alumno {
 
     public int getEdad(){
         return this.edad;
+    }
+
+    @Override
+
+    public String toString("\n-----Datos de Alumno-----"){
+        String.format("[ID: %d] %-12s, %s, %d" id, nombre, tituloFP, edad);
+
     }
 
 }
