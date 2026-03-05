@@ -16,7 +16,7 @@ public class CentroFP {
     //Contructor de la clase CentroFP
     public CentroFP(int maxAlumnos) {
         MAX_ALUMNOS = maxAlumnos;
-        this.alumnos =
+        this.alumnos = new Alumno[MAX_ALUMNOS];
     }
 
 
@@ -26,20 +26,28 @@ public class CentroFP {
 
     }
 
-    private  int buscarPrimerHuecolibre(){
+    private  int buscarPrimerHuecolibre(int id){
         int plazaEncontrada = -1;
         boolean buscandoPlaza = true;
 
         for (int i = 0; i<MAX_ALUMNOS && buscandoPlaza; i++){
-            if ( != null){
+            if (alumnos[i] != null && alumnos[i].getId() == id){
+                buscandoPlaza = false;
 
             }
         }
-
+        return  plazaEncontrada;
     }
 
     public boolean regirtrarAlumno(Alumno alumno){
+        int alumnoMatriculado = -1;
+        boolean matriculandoAlumno = true;
 
+        for (int i = 0; i<MAX_ALUMNOS && matriculandoAlumno; i++){
+            if (alumno != null){
+
+            }
+        }
     }
 
     public String mostrarAlumnos(){
