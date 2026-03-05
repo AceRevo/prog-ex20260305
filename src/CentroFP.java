@@ -21,15 +21,31 @@ public class CentroFP {
 
 
     //Metodos a plaicar
-    public  Alumno buscarAlumno(int id){
-
-
+    //buscar luchador mediante la id
+    public  Alumno buscarAlumno(int id) {
+        boolean llamandoAlumno = true;
+        Alumno alumnoPresente = null;
+//Recorrido de Array
+        for (int i = 0; i < MAX_ALUMNOS && llamandoAlumno; i++) {
+            //condicional si se encontro el alumno
+            if (alumnos[i] != null && alumnos[i].getId() == id) {
+            llamandoAlumno = false;
+            alumnoPresente = alumnos[i];
+                }
+            }
+        return alumnoPresente;
     }
 
-    private  int buscarPrimerHuecolibre(int id){
-        int plazaEncontrada = -1;
-        boolean buscandoPlaza = true;
 
+    private  int buscarPrimerHuecolibre(int id){
+        //Declaracion e inicializacion de variables con una nueva variable.
+        int plazaEncontrada = -1;
+        boolean buscandoPlaza = true; // por fdefecto
+
+
+        /* recorre el array buscando el primer hueco libre, por defecto sigue buscando , pero si es distinto de nulo significa
+        que el hueco ya fue encontrado y al mismo tiempo ocupado
+        */
         for (int i = 0; i<MAX_ALUMNOS && buscandoPlaza; i++){
             if (alumnos[i] != null && alumnos[i].getId() == id){
                 buscandoPlaza = false;
@@ -40,14 +56,18 @@ public class CentroFP {
     }
 
     public boolean regirtrarAlumno(Alumno alumno){
-        int alumnoMatriculado = -1;
+        int posicion;
         boolean matriculandoAlumno = true;
+        if ()
 
-        for (int i = 0; i<MAX_ALUMNOS && matriculandoAlumno; i++){
-            if (alumno != null){
+            if (alumno >= 0){
+                alumno[posicion];
+
+
 
             }
         }
+        return alumnoMatriculado;
     }
 
     public String mostrarAlumnos(){
