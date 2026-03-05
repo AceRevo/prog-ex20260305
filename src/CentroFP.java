@@ -56,14 +56,15 @@ public class CentroFP {
     }
 
     public boolean regirtrarAlumno(Alumno alumno){
+        //agregamos la variables pocision para saber donde se encuentra nuestro alumno;
         int posicion;
-        boolean matriculandoAlumno = true;
-        if ()
-
-            if (alumno >= 0){
-                alumno[posicion];
-
-
+        int alumnoMatriculado = null;
+        boolean matriculandoAlumno = false; //por default
+        if (buscarAlumno(alumno.getId()) == null){
+            posicion = buscarPrimerHuecolibre();
+        if (posicion >= 0) {
+            alumnos[posicion] = alumno;
+            matriculandoAlumno = true;
 
             }
         }
@@ -71,7 +72,8 @@ public class CentroFP {
     }
 
     public String mostrarAlumnos(){
-
+    StringBuilder sb = new StringBuilder("\n===== Alumnos Matriculados=======");
+        String.format()
     }
 
     public int contarAlumnos(){
